@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { NavLink } from 'react-router-dom';
+import { FaCartShopping, FaHeart } from 'react-icons/fa6';
 
 const Navbar = () => {
   const { name } = useContext(AuthContext);
@@ -11,11 +12,17 @@ const Navbar = () => {
       <NavLink>Products</NavLink>
       <NavLink>About</NavLink>
       <NavLink>Contact</NavLink>
+      <NavLink>
+        <FaHeart className="text-xl " />
+      </NavLink>
+      <NavLink>
+        <FaCartShopping className="text-xl" />
+      </NavLink>
     </nav>
   );
 
   return (
-    <nav className="navbar bg-base-200 shadow-sm border-b-4 py-4">
+    <nav className="navbar bg-base-200 shadow-sm border-b-2 py-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
