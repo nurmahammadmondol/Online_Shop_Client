@@ -62,7 +62,7 @@ const TrendingCategories = () => {
   ];
 
   return (
-    <div className="w-11/12 mx-auto my-10">
+    <div className="w-11/12 mx-auto my-10 ">
       <div className="mb-5 flex justify-between items-center">
         <img
           className="w-36 lg:w-48"
@@ -70,7 +70,7 @@ const TrendingCategories = () => {
           alt=""
         />
 
-        <button className="btn bg-orange-400 text-white">
+        <button className="btn bg-[#576bb3] text-white">
           See more <FaArrowCircleRight />
         </button>
       </div>
@@ -86,7 +86,7 @@ const TrendingCategories = () => {
           pagination={{ clickable: true }}
           navigation={true}
           modules={[Pagination, Navigation, Grid]}
-          className="mySwiper"
+          className="mySwiper p-10"
         >
           {categories.map(category => (
             <SwiperSlide key={category.id}>
@@ -94,9 +94,9 @@ const TrendingCategories = () => {
                 <img
                   src={category.img}
                   alt={category.name}
-                  className="w-full h-20 object-cover rounded-md"
+                  className="w-full h-10 object-cover rounded-md"
                 />
-                <h3 className="mt-3 text-lg font-semibold">{category.name}</h3>
+                <h3 className="mt-3  font-semibold">{category.name}</h3>
               </div>
             </SwiperSlide>
           ))}
